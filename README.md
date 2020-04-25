@@ -55,7 +55,7 @@ First you need the Windows Server 2019 VM for your hypervisor. I prefer
 Step 1 (building the headless Vagrant box) can be done with these steps:
 
 ```bash
-$ git clone https://github.com/StefanScherer/packer-windows
+$ git clone ssh://git@github.com:ghaliba3/packer-windows
 $ cd packer-windows
 
 $ packer build --only=vmware-iso windows_2019_docker.json
@@ -98,7 +98,7 @@ Spin up the headless Vagrant box you created earlier with Windows Server 2019 an
 installed. It will create the TLS certs and create a `2019-box` Docker context (new with Docker 19.03) and docker-machine configuration on your Mac.
 
 ```bash
-$ git clone https://github.com/StefanScherer/windows-docker-machine
+$ git clone ssh://git@github.com/ghaliba3/windows-docker-machine
 $ cd windows-docker-machine
 $ vagrant up --provider vmware_desktop 2019-box
 
@@ -223,7 +223,7 @@ PS C:\> mkdir $env:USERPROFILE\.docker
 Choose your hypervisor and start the VM
 
 ```powershell
-PS C:\> git clone https://github.com/StefanScherer/windows-docker-machine
+PS C:\> git clone https://github.com/ghaliba3/windows-docker-machine
 PS C:\> cd windows-docker-machine
 PS C:\> vagrant up --provider vmware_desktop 2019-box
 
